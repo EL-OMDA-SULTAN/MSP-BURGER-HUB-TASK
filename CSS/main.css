@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+                               /* General Style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Dancing Script", cursive;
+}
+
+:root {
+  --fr_color:#121212ff;
+  --sc_color:#c2390cff;
+  --wi_color:white;
+  --bl_color:black;
+}
+body {
+  background-color: var(--fr_color);
+}
+
+                         /* navbar style  */
+nav {
+  z-index: 999;
+  background-color: var(--sc_color);
+  width: 60%;
+  position: sticky;
+  top: 0;
+  left: 20%;
+  border-radius: 0px 0px 50px 50px;
+}
+
+nav .nav-logo {
+  width: 20%;
+  margin: auto;
+}
+
+nav .nav-logo img {
+  width: 100%;
+  padding-top: 10px;
+}
+
+nav .nav-list li {
+  display: inline-block;
+  padding: 20px 0px 20px 110px;
+}
+nav .nav-list li:nth-child(1){
+  position: relative;
+}
+nav .nav-list li:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  width: 35%;
+  background-color: var(--wi_color);
+  height: 3px;
+}
+nav .nav-list li a {
+  text-decoration: none;
+  color: var(--wi_color);
+  font-size: 20px;
+  font-weight: 900;
+}
+nav .nav-list li:nth-child(1):hover::before {
+  background-color: var(--fr_color);
+}
+nav .nav-list li:hover a{
+  color: var(--fr_color);
+}
+
+@media (max-width:768px) {
+  nav{
+    width: 80%;
+    left: 10%;
+  }
+
+  nav .nav-logo{
+    width: 40%;
+  }
+
+  nav .nav-list li {
+    display: inline-block;
+    padding: 2px 0px 25px 15px;
+  }
+
+  nav .nav-list li a{
+    font-size: 15px;
+    font-weight: 400;
+  }
+nav .nav-list li:nth-child(1)::before{
+    bottom: 45%;
+    width: 72%;
+  }
+}
+
+                     /* header style */
+
+header{
+    color: var(--wi_color);
+    margin-top: 7%;
+    position: relative;
+}
+
+header .header-content{
+  width: 40%;
+  margin-left: 12%;
+}
+
+header .header-content h1{
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+header .header-content h1 span{
+  color: var(--sc_color);
+  font-size: 47px;
+}
+
+header .header-content p{
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+header .header-content p span{
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+header .header-content .btn{
+  color: var(--sc_color);
+  margin-top: 40px;
+  padding: 10px 60px;
+  font-size: 35px;
+  font-weight: 900;
+  background-color: var(--fr_color);
+  border: solid 4px var(--sc_color);
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+header .header-content .btn:hover{
+  background-color: var(--wi_color);
+  color: var(--bl_color);
+}
+
+header .header-img {
+  width: 32%;
+  position: absolute;
+  top: 0;
+  left: 60%;
+}
+
+header .header-img img{
+  width: 100%;
+}
+
+                         /* Menu style */
+
+.menu{
+  background-color: #d9d9d9ff;
+}
+
+.menu h2{
+  font-size: 65px;
+  color: var(--sc_color);
+  font-weight: 900;
+  padding: 40px;
+  margin-left: 40%;
+}
+
+.menu .menu-list{
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu .menu-list .click{
+  font-size: 50px;
+  color: var(--sc_color);
+  cursor: pointer;
+  align-self: center;
+}
+.menu .menu-list .menu-list-option{
+  width: 25%;
+  background-image:linear-gradient(45deg,var(--sc_color),var(--fr_color) 50% );
+  padding-top: 40px;
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+
+.menu .img{
+  margin: auto;
+  width: 50%;
+  height: 180px;
+  border:solid 3px var(--sc_color);
+  overflow: hidden;
+  background-image: url("../images/2150857908.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-color: var(--fr_color);
+}
+
+.menu .menu-list .menu-list-option h3{
+  color: var(--wi_color);
+  margin-left:37% ;
+  font-size: 30px;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.menu .time-num{
+  margin: 10px;
+  color:var(--wi_color);
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .menu-list-option .btn{
+  font-weight: bolder;
+  cursor: pointer;
+  padding:7px 40px;
+  font-size: 25px;
+  margin-left: 23%;
+  margin-bottom: 20px;
+  background-color: var(--sc_color);
+  border: solid 3px var(--fr_color);
+  color: var(--wi_color);
+  border-radius: 30px;
+}
+
+.menu .menu-list-option .btn:hover{
+  background-color: var(--wi_color);
+  color: var(--bl_color);
+}
+
+                    /* footer Style */
+
+footer{
+  color: var(--wi_color);
+  width: 100%;
+}
+footer .chick{
+  margin-left: 40%;
+}
+
+footer .chick h2{
+  margin: 20px 0px;
+  font-size: 35px;
+}
+
+footer .chick .btn{
+  cursor: pointer;
+padding: 10px 50px;
+font-size: 30px;
+background-color: var(--sc_color);
+border: none;
+border-radius: 20px;
+margin:0px 60px 30px;
+color: var(--wi_color);
+}
+
+footer .chick .btn:hover{
+  color: var(--bl_color);
+  background-color: var(--wi_color);
+}
+
+footer .info{
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: space-around;
+}
+footer .info .logo{
+  width: 25%;
+  margin-top: 60px;
+}
+
+footer .info .logo img{
+  width: 100%;
+}
+
+footer .info h2{
+  font-size: 45px;
+  color: var(--sc_color);
+}
+
+footer .info ul li{
+  list-style: none;
+  text-align: center;
+}
+footer .info a{
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--wi_color);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+footer hr{
+  margin:20px auto;
+  width: 80%;
+}
+
+footer .join{
+  position: relative;
+}
+
+footer .join h2{
+  font-size: 45px;
+  position: absolute;
+  left: 47%;
+}
+
+footer .join .icon{
+  position: absolute;
+  margin-top: 70px;
+  left: 43.5%;
+}
+
+footer .join .icon i{
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  padding-top: 5px;
+  margin:0px 10px 15px;
+  font-size: 40px;
+  border:solid 3px var(--wi_color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer .join .icon i:nth-child(1):hover{
+  color: blue;
+  background-color: var(--wi_color);
+  border-color: blue;
+}
+
+footer .join .icon i:nth-child(2):hover{
+  color: var(--fr_color);
+  background-color:var(--wi_color);
+  border-color: var(--fr_color);
+}
+
+footer .join .icon i:nth-child(3):hover{
+  color: rgb(191, 12, 39);
+  background-color: var(--wi_color);
+  border-color: rgb(191, 12, 39);
+}
